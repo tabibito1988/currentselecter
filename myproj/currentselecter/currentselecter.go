@@ -44,6 +44,8 @@ func main() {
 		if 0 < i && i <= projectcount {
 			i--
 			break
+		} else {
+			fmt.Printf("1-%dの中から選んでください。\n", projectcount)
 		}
 	}
 
