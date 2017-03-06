@@ -21,7 +21,7 @@ func main() {
 	var selectnumber string
 
 	// JSONファイル読み込み
-	bytes, err := ioutil.ReadFile("currentpathdata.json")
+	bytes, err := ioutil.ReadFile("D:\\Users\\morimoto\\godev\\src\\github.com\\workspace\\myproj\\currentselecter\\currentpathdata.json")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -47,8 +47,6 @@ func main() {
 		}
 	}
 
-	fmt.Print(projectdatas[i])
-
-	cmd := exec.Command("dir", projectdatas[i].Filepath)
+	exec.Command("code", projectdatas[i].Filepath).Run()
 
 }
